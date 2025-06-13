@@ -22,4 +22,7 @@ app.use((err, req, res, next) => {
 const productRoutes = require('./routes/productRoutes');
 app.use('/api/products', productRoutes);
 
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes);
+
 module.exports = app;
