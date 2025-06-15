@@ -35,4 +35,10 @@ const brandRoutes = require('./routes/brandRoutes');
 app.use('/api/categories', categoryRoutes);
 app.use('/api/brands', brandRoutes);
 
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes);
+
 module.exports = app;
