@@ -25,4 +25,7 @@ app.use('/api/products', productRoutes);
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+const reviewRoutes = require('./routes/reviewRoutes');
+app.use('/api', reviewRoutes);
+
 module.exports = app;
