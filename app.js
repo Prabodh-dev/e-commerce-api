@@ -19,6 +19,7 @@ app.use((err, req, res, next) => {
     .json({ error: err.message || 'Something went wrong' });
 });
 
+//routes
 const productRoutes = require('./routes/productRoutes');
 app.use('/api/products', productRoutes);
 
@@ -27,5 +28,11 @@ app.use('/api/auth', authRoutes);
 
 const reviewRoutes = require('./routes/reviewRoutes');
 app.use('/api', reviewRoutes);
+
+const categoryRoutes = require('./routes/categoryRoutes');
+const brandRoutes = require('./routes/brandRoutes');
+
+app.use('/api/categories', categoryRoutes);
+app.use('/api/brands', brandRoutes);
 
 module.exports = app;

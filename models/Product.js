@@ -15,10 +15,15 @@ const productSchema = new mongoose.Schema({
     required: [true, 'Price is required'],
   },
   category: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category',
     required: true,
   },
-  brand: String,
+  brand: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Brand',
+    required: true,
+  },
   inStock: {
     type: Boolean,
     default: true,
